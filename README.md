@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/phamphu232/docker-vsftp.git docker-vsftp && cd docker-vsftp
-sudo chown root vsftpd.conf
+sudo chown root:root vsftpd.conf
 
 docker-compose up -d
 
