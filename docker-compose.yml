@@ -10,8 +10,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro 
       - ./vsftpd.conf:/etc/vsftpd.conf
+      - ./volumes/script:/tmp/script
       - ./volumes/ftp:/home/
     restart: unless-stopped
     working_dir: /home
-    command: tail -f /dev/null
+    command: /tmp/script/start-vsftpd.sh
     #docker run -p 20:20 -p 21:21 -d phamphu232/vsftpd:20231218

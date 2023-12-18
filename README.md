@@ -14,7 +14,7 @@ docker push phamphu232/vsftpd:20231218
 
 ```
 # Syntax
-docker exec -it con_vsftpd sh -c "useradd -m -s <UserName> && echo <UserName>:<Password> | chpasswd"
+docker exec -it con_vsftpd bash -c "useradd -m <UserName> && echo <UserName>:<Password> | chpasswd"
 # Example
-docker exec -it con_vsftpd sh -c "useradd -m -s takonote && echo 'takonote:Daito@2368' | chpasswd"
+docker exec -it con_vsftpd bash -c "useradd -m takonote && echo 'takonote:Daito2368' | chpasswd"
 ```
