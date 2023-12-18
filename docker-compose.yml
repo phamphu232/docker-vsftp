@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  vsftpd:
+    image: phamphu232/vsftpd:20231218
+    container_name: con_vsftpd
+    ports:
+      - '20:20'
+      - '21:21'
+    volumes:
+      - /etc/localtime:/etc/localtime:ro 
+      - ./vsftpd.conf:/etc/vsftpd.conf
+      - ./volumes/ftp:/home/
+    restart: unless-stopped
+    working_dir: /home
+    command: tail -f /dev/null
+    #docker run -p 20:20 -p 21:21 -d phamphu232/vsftpd:20231218
