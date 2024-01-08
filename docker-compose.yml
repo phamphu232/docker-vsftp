@@ -11,6 +11,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro 
       - ./vsftpd.conf:/etc/vsftpd.conf
+      - ./sshd_config:/etc/ssh/sshd_config
       - ./volumes/script:/tmp/script
       - ./volumes/home:/home/
     restart: unless-stopped
