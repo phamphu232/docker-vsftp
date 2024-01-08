@@ -20,6 +20,9 @@ docker-compose up -d
 docker exec -it con_vsftpd bash -c "useradd -m <UserName> && echo <UserName>:<Password> | chpasswd"
 # Example
 docker exec -it con_vsftpd bash -c "useradd -m demo && echo 'demo:Demo2368' | chpasswd"
+
+# Remove
+docker exec -it con_vsftpd bash -c "userdel demo && rm -r /home/demo"
 ```
 
 ## Build images and push images to docker hub
