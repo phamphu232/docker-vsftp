@@ -7,11 +7,12 @@ services:
     ports:
       - '20:20'
       - '21:21'
+      - '2222:22'
     volumes:
       - /etc/localtime:/etc/localtime:ro 
       - ./vsftpd.conf:/etc/vsftpd.conf
       - ./volumes/script:/tmp/script
-      - ./volumes/ftp:/home/
+      - ./volumes/home:/home/
     restart: unless-stopped
     working_dir: /home
     command: /tmp/script/start-vsftpd.sh

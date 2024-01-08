@@ -4,11 +4,12 @@
 
 ```
 git clone https://github.com/phamphu232/docker-vsftp.git docker-vsftp && cd docker-vsftp
-sudo chown root:root vsftpd.conf
+sudo chown root:root vsftpd.conf sshd_config
 
 docker-compose up -d
 
-# (If any) Update file vsftp.conf
+# (If any) Update file vsftp.conf 
+# (If any) Update file sshd_config
 ```
 
 
@@ -18,7 +19,7 @@ docker-compose up -d
 # Syntax
 docker exec -it con_vsftpd bash -c "useradd -m <UserName> && echo <UserName>:<Password> | chpasswd"
 # Example
-docker exec -it con_vsftpd bash -c "useradd -m takonote && echo 'takonote:Daito2368' | chpasswd"
+docker exec -it con_vsftpd bash -c "useradd -m demo && echo 'demo:Demo2368' | chpasswd"
 ```
 
 ## Build images and push images to docker hub
